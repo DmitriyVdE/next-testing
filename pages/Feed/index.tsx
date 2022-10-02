@@ -1,14 +1,13 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import Script from "next/script";
 import { memo } from "react";
 import utilStyles from "../../styles/utils.module.scss";
-import Layout from "../../components/Layout";
+import { Layout } from "../../components";
 
 interface IFeedProps {}
 
-const Feed: NextPage = ({}: IFeedProps): JSX.Element => {
+const Feed: NextPage<IFeedProps> = ({}: IFeedProps): JSX.Element => {
   return (
     <Layout>
       <Head>
@@ -19,13 +18,13 @@ const Feed: NextPage = ({}: IFeedProps): JSX.Element => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script
+      {/* <Script
         src="https://connect.facebook.net/en_US/sdk.js"
         strategy="lazyOnload"
         onLoad={() =>
           console.log(`script loaded correctly, window.FB has been populated`)
         }
-      />
+      /> */}
 
       <nav>
         <ul>
